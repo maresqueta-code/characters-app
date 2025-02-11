@@ -13,6 +13,7 @@
 
   --weight-light: 300;
   --weight-regular: 400;
+  --weight-medium: 500;
   --weight-bold: 700;
 
   --line-height-xs: 14.06px;
@@ -20,6 +21,7 @@
   --line-height-md: 18.75px;
   --line-height-lg: 28.13px;
   --line-height-xl: 37.5px;
+  --line-height-xxl: 46.88px;
 
   --spacing-0: 0px;
   --spacing-1: 4px;
@@ -32,7 +34,7 @@
   --spacing-8: 48px;
   --spacing-9: 64px;
   --spacing-10: 80px;
-  --spacing-11: 96px;
+  --spacing-11: 84px;
 
   --icon-xs: 12px;
   --icon-sm: 16px;
@@ -44,12 +46,12 @@
 
   --color-primary: #000;
   --color-secondary: #fff;
-  --color-disabled: #aaa;
+  --color-marvel: #ec1d24;
+  --color-border: #333;
+  --color-background: #d9d9d9;
 
   --button-color-primary: #e5e5e5;
   --button-color-secondary: #c7c8cc;
 
   --border: 1px solid var(--color-primary);
-
-  --breakpoint-mobile: 480px;
 }

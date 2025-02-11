@@ -1,4 +1,6 @@
+import { vi } from 'vitest';
 import type { ReactElement, ReactNode } from 'react';
+import { create } from 'zustand';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { render, type RenderOptions, type RenderResult } from '@testing-library/react';
 import {
@@ -7,6 +9,7 @@ import {
   type WrapperComponent,
 } from '@testing-library/react-hooks';
 import { MemoryRouter } from 'react-router-dom';
+import type { Filters } from '@/application/stores/filterStore';
 
 export function createTestQueryClient() {
   return new QueryClient({
@@ -21,6 +24,14 @@ export function createTestQueryClient() {
     },
   });
 }
+
+// Mock Filter Store
+export const useFilterStore = vi.fn();
+
+export const setupFilterStore = (initialState: Filters) => {
+  const store = create(() => initialState);
+  useFilterStore.mockImplementation(store);
+};
 
 // Utility to wrap components with Router
 export function renderWithRouter(ui: ReactElement): RenderResult {

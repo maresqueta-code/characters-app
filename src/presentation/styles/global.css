@@ -3,8 +3,7 @@
 
 body {
   font-family: var(--font-family-base);
-
-  min-width: 400px;
+  min-width: 250px;
   box-sizing: border-box;
   margin: var(--spacing-0);
   margin-top: var(--spacing-11);
@@ -14,14 +13,12 @@ h1 {
   font-size: var(--font-size-lg);
   font-weight: var(--weight-bold);
   line-height: var(--line-height-xl);
-  color: var(--color-primary);
 }
 
 h2 {
-  font-size: var(--font-size-md);
-  font-weight: var(--weight-bold);
-  line-height: var(--line-height-lg);
-  color: var(--color-secondary);
+  font-weight: var(--weight-medium);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-md);
 }
 
 h3 {
@@ -34,5 +31,28 @@ p {
   font-size: var(--font-size-sm);
   font-weight: var(--weight-regular);
   line-height: var(--line-height-md);
-  color: var(--color-secondary);
+}
+
+.solid-border {
+  border: var(--border);
+}
+
+.bottom-border {
+  border-bottom: var(--border);
+}
+
+.top-border {
+  border-top: var(--border);
+}
+
+.no-border {
+  border: none;
+}
+
+.no-background {
+  background: none;
+}
+
+.no-padding {
+  padding: none;
 }

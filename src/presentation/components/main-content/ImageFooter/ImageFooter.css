@@ -1,0 +1,79 @@
+.image-footer {
+  position: relative;
+  width: 100%;
+  height: 56px;
+  background-color: var(--color-primary);
+  display: grid;
+  column-gap: var(--spacing-2);
+  grid-template-columns: 1fr auto;
+  padding: var(--spacing-4);
+  padding-bottom: var(--spacing-5);
+  box-sizing: border-box;
+  text-transform: uppercase;
+  cursor: default;
+  overflow: hidden;
+}
+
+/* Layer for top-down filling animation */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-marvel);
+  transition: height 0.3s;
+  z-index: 0;
+}
+
+/* Activate the animation when the mouse is over the footer */
+.image-footer:hover .overlay {
+  height: 100%;
+}
+
+/* Heart correctly aligned */
+.heart-container {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* Heart with soft transition */
+.heart {
+  transition:
+    fill 0.3s,
+    stroke 0.3s;
+}
+
+/* WireHeart by default when it's not favourite */
+.image-footer:not(.favourite) .heart path {
+  fill: none;
+  stroke: var(--color-secondary);
+  stroke-width: 2px;
+}
+
+/* Red Heart when is favourite */
+.image-footer.favourite .heart path {
+  fill: var(--color-marvel);
+  stroke: var(--color-marvel);
+}
+
+/* WireHeart when hovering and it's not favourite */
+.image-footer:hover:not(.favourite) .heart path {
+  fill: none;
+  stroke: var(--color-secondary);
+}
+
+/* White Heart when hovering and it's favourite  */
+.image-footer:hover.favourite .heart path {
+  fill: var(--color-secondary);
+  stroke: var(--color-secondary);
+}
+
+.image-label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--weight-regular);
+  line-height: var(--line-height-sm);
+  color: var(--color-secondary);
+  z-index: 3;
+}

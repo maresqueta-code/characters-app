@@ -4,6 +4,7 @@ import { DetailLayout } from '@/presentation/pages/DetailLayout';
 import { HomeLayout } from '@/presentation/pages/HomeLayout';
 import { ErrorPage } from '@/presentation/pages/ErrorPage';
 import { useLang } from '@/presentation/hooks/useLang';
+import { MainContent } from '@/presentation/components/main-content/MainContent/MainContent';
 
 export function AppRoutes() {
   const { t } = useLang();
@@ -16,7 +17,17 @@ export function AppRoutes() {
       <Route
         path={ROUTE_URLS.HOME_PAGE}
         element={<HomeLayout />}
-      ></Route>
+      >
+        {' '}
+        <Route
+          path={ROUTE_URLS.FAVOURITES_PAGE}
+          element={<MainContent listFavourites />}
+        />
+        <Route
+          index
+          element={<MainContent />}
+        />
+      </Route>
       <Route
         path={ROUTE_URLS.ERROR_PAGE}
         element={<ErrorPage />}
