@@ -1,0 +1,33 @@
+# Dependency directories
+node_modules/
+packages/
+
+# Environment files
+.env*
+
+# Build Production output
+/dist/
+/.vite/
+/*.zip
+/*.tgz
+
+# IDE/Editor specific and misc files
+.vscode/
+.DS_Store
+npmrc
+TODO.txt
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.lock
+yarn-lock.json
+package-lock.json
+
+# Testing
+/coverage

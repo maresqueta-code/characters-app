@@ -1,0 +1,12 @@
+.fav-container {
+  display: flex;
+  align-items: center;
+}
+
+.fav-icon {
+  margin-right: 10px;
+}
+
+.fav-container p {
+  color: var(--color-secondary);
+}
