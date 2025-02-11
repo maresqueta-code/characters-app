@@ -1,10 +1,5 @@
-import { useGetCharacter } from './application/hooks/useGetCharacter';
-import { useGetCharacterList } from './application/hooks/useGetCharacterList';
+import { AppRoutes } from '@/presentation/routes/AppRoutes';
 
 export function App() {
-  const { data } = useGetCharacterList();
-
-  const { data: details } = useGetCharacter('1');
-  console.log(data, details);
-  return <div>Character App</div>;
+  return <AppRoutes />;
 }

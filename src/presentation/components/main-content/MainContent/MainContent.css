@@ -1,0 +1,23 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-8);
+  padding-top: var(--spacing-5);
+  gap: var(--spacing-3);
+}
+
+.main-container-hide-on-small {
+  display: block;
+}
+
+@media (max-width: 780px) {
+  .main-container {
+    padding: var(--spacing-4);
+  }
+}
+
+@media (max-width: 250px) {
+  .main-container-hide-on-small {
+    display: none;
+  }
+}
