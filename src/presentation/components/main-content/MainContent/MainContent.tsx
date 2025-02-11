@@ -17,7 +17,9 @@ export function MainContent({ listFavourites }: MainContentProps) {
       <section>
         {listFavourites && <h1>{t.FAVOURITES}</h1>}
         <FilterInput isLoading={isLoading} />
-        <CharacterCount count={filteredCharacters.length} />
+        <CharacterCount
+          count={listFavourites ? favouriteCharacters.length : filteredCharacters.length}
+        />
       </section>
       <CharacterList characters={listFavourites ? favouriteCharacters : filteredCharacters} />
     </div>
