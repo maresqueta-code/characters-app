@@ -1,0 +1,5 @@
+.toggle-btn {
+  background-color: var(--color-primary);
+  padding: var(--spacing-0);
+  cursor: pointer;
+}

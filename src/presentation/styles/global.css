@@ -56,3 +56,25 @@ p {
 .no-padding {
   padding: none;
 }
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-marvel);
+}
+
+@media (max-width: 1080px) {
+  h1 {
+    font-size: var(--font-size-md);
+    font-weight: var(--weight-bold);
+    line-height: var(--line-height-lg);
+  }
+}

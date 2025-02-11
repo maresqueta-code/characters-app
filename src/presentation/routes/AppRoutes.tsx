@@ -4,6 +4,7 @@ import { DetailLayout } from '@/presentation/pages/DetailLayout';
 import { HomeLayout } from '@/presentation/pages/HomeLayout';
 import { ErrorPage } from '@/presentation/pages/ErrorPage';
 import { useLang } from '@/presentation/hooks/useLang';
+import { DetailContent } from '@/presentation/components/detail-content/DetailContent/DetailContent';
 import { MainContent } from '@/presentation/components/main-content/MainContent/MainContent';
 
 export function AppRoutes() {
@@ -13,12 +14,16 @@ export function AppRoutes() {
       <Route
         path={ROUTE_URLS.CHARACTER_PAGE}
         element={<DetailLayout />}
-      ></Route>
+      >
+        <Route
+          index
+          element={<DetailContent />}
+        />
+      </Route>
       <Route
         path={ROUTE_URLS.HOME_PAGE}
         element={<HomeLayout />}
       >
-        {' '}
         <Route
           path={ROUTE_URLS.FAVOURITES_PAGE}
           element={<MainContent listFavourites />}
