@@ -54,4 +54,11 @@
   --button-color-secondary: #c7c8cc;
 
   --border: 1px solid var(--color-primary);
+
+  /*
+  Breakpoints used for media queries:
+  - breakpoint-tablet: 1080px
+  - breakpoint-mobile: 780px
+  - breakpoint-small-mobile: 480px
+  */
 }
