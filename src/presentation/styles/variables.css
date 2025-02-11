@@ -1,0 +1,55 @@
+:root {
+  --font-family-base: 'Roboto Condensed', sans-serif;
+  --font-size-base: 16px;
+  --font-color-base: #000000;
+  --font-weight-base: normal;
+
+  --font-size-xxs: 12px;
+  --font-size-xs: 14px;
+  --font-size-sm: 16px;
+  --font-size-md: 24px;
+  --font-size-lg: 32px;
+  --font-size-xl: 40px;
+
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-bold: 700;
+
+  --line-height-xs: 14.06px;
+  --line-height-sm: 16.41px;
+  --line-height-md: 18.75px;
+  --line-height-lg: 28.13px;
+  --line-height-xl: 37.5px;
+
+  --spacing-0: 0px;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 24px;
+  --spacing-6: 32px;
+  --spacing-7: 40px;
+  --spacing-8: 48px;
+  --spacing-9: 64px;
+  --spacing-10: 80px;
+  --spacing-11: 96px;
+
+  --icon-xs: 12px;
+  --icon-sm: 16px;
+  --icon-md: 24px;
+  --icon-lg: 32px;
+
+  --opacity-disabled: 0.4;
+  --opacity-enabled: 1;
+
+  --color-primary: #000;
+  --color-secondary: #fff;
+  --color-disabled: #aaa;
+
+  --button-color-primary: #e5e5e5;
+  --button-color-secondary: #c7c8cc;
+
+  --border: 1px solid var(--color-primary);
+
+  --breakpoint-mobile: 480px;
+}

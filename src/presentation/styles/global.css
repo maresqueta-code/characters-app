@@ -1,0 +1,38 @@
+/* import fonts weight light (300), normal (400), medium (500), and bold (700) and optimize their load */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;700&display=swap');
+
+body {
+  font-family: var(--font-family-base);
+
+  min-width: 400px;
+  box-sizing: border-box;
+  margin: var(--spacing-0);
+  margin-top: var(--spacing-11);
+}
+
+h1 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--weight-bold);
+  line-height: var(--line-height-xl);
+  color: var(--color-primary);
+}
+
+h2 {
+  font-size: var(--font-size-md);
+  font-weight: var(--weight-bold);
+  line-height: var(--line-height-lg);
+  color: var(--color-secondary);
+}
+
+h3 {
+  font-size: var(--font-size-xxs);
+  font-weight: var(--weight-regular);
+  line-height: var(--line-height-xs);
+}
+
+p {
+  font-size: var(--font-size-sm);
+  font-weight: var(--weight-regular);
+  line-height: var(--line-height-md);
+  color: var(--color-secondary);
+}
