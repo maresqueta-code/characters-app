@@ -3,9 +3,8 @@ import type { CharacterDTO, TransformationDTO } from './characterDTO.types';
 
 export const characterRepository = {
   getAll: async (): Promise<CharacterDTO[]> => {
-    const fetchURL = new URL(BASE_URL);
     try {
-      const response = await fetch(`${fetchURL}${API_ENDPOINTS.CHARACTERS}?limit=50`, {
+      const response = await fetch(`${BASE_URL}${API_ENDPOINTS.CHARACTERS}?limit=50`, {
         method: 'GET',
       });
       const data = await response.json();
@@ -16,9 +15,8 @@ export const characterRepository = {
   },
 
   getById: async (id: string): Promise<TransformationDTO[]> => {
-    const fetchURL = new URL(BASE_URL);
     try {
-      const response = await fetch(`${fetchURL}${API_ENDPOINTS.CHARACTERS}${id}`, {
+      const response = await fetch(`${BASE_URL}${API_ENDPOINTS.CHARACTERS}/${id}`, {
         method: 'GET',
       });
       const data = await response.json();
