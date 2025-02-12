@@ -1,7 +1,7 @@
 {
   "name": "characters-app",
   "private": true,
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "React Character App with react-query, zustand, react-testing-library, vite, vitest, jest, msw, and test coverage.",
   "type": "module",
   "license": "MIT",
