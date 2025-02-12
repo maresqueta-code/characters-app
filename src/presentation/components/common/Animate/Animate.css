@@ -1,0 +1,58 @@
+.animate-container {
+  position: inline-block;
+  opacity: 0;
+}
+
+/* Fade In animation */
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Fade Out animation */
+
+.fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+/* Slide Down animation */
+.slide-down {
+  animation: slideDown 1s forwards;
+}
+
+@keyframes slideDown {
+  to {
+    opacity: 1;
+    /* If `data-endy` attribute exists uses it, else uses 20px */
+    transform: translateY(var(--endy, 20px));
+  }
+}
+
+/* Slide Up animation */
+.slide-up {
+  animation: slideUp 1s forwards;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    /* If `data-endy` attribute exists uses it, else uses -20px */
+    transform: translateY(var(--endy, -20px));
+  }
+}
+
+/* The `data-endy` attr is used define the final position */
+.animate-container[data-endy] {
+  --endy: attr(data-endy px);
+}
