@@ -1,4 +1,4 @@
-## Characters App v1.0.0
+## Characters App v1.0.1
 
 ### Author: Marcos Luis Aresqueta
 

@@ -1,4 +1,4 @@
-## Characters App v1.0.0
+## Characters App v1.0.1
 
 ### Author: Marcos Luis Aresqueta
 
@@ -25,6 +25,12 @@ Character App (MVP) es una app funcional que sigue la especificación y diseño 
 Los componentes funcionales, incluso los que proveen animaciones se desarrollaron desde cero con `CSS` estándar. No se utilizó ninguna librería de componentes.
 Al momento de desarrollar la integración con la `API` no fue posible generar la `API key` de `Marvel`, por lo que se utilizó la `API` alternativa de `Dragon Ball` que se indica en la [Evaluación Técnica](prueba-tecnica-ioplogistica.pdf). De todos modos, dado que los diseños son para el universo de `Marvel`, se mantuvo el logo de `Marvel` en el `Header` y el título `Comics` en la vista de detalles de un personaje para que sea fiel a los diseños en `Figma`.
 Respecto a la `Accesibilidad` y `Buenas prácticas`, la `App` se auditó `localhost` con la utilidad `Lighthouse` de `Chrome Devtools` en modos `Desktop` y `Mobile`. El resultado fue de `100%`.
+
+El branch del repositorio es `main` y el tag `v1.0.1`.
+
+La App se encuentra desplegada y accesible en Vercel en https://characters-marcos.vercel.app/
+
+Saludos,
 
 ### Compatibility
 
