@@ -8,6 +8,7 @@ export function ProgressBar() {
 
   useEffect(() => {
     let interval: NodeJS.Timeout;
+    let timeout: NodeJS.Timeout;
     if (isFetching > 0) {
       setProgress(0);
       interval = setInterval(() => {
@@ -15,10 +16,12 @@ export function ProgressBar() {
       }, 100);
     } else {
       setProgress(100);
-      const timeout = setTimeout(() => setProgress(0), 100);
-      return () => clearTimeout(timeout);
+      timeout = setTimeout(() => setProgress(0), 300);
     }
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+      clearTimeout(timeout);
+    };
   }, [isFetching]);
 
   return (
