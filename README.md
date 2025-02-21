@@ -1,4 +1,4 @@
-## Characters App v1.0.1
+## Characters App v1.0.2
 
 ### Author: Marcos Luis Aresqueta
 
@@ -24,13 +24,11 @@
 Character App (MVP) es una app funcional que sigue la especificación y diseño provistos en el fichero PDF [Evaluación Técnica](prueba-tecnica-ioplogistica.pdf), aplicando Clean Architecture y principios SOLID.
 Los componentes funcionales, incluso los que proveen animaciones se desarrollaron desde cero con `CSS` estándar. No se utilizó ninguna librería de componentes.
 Al momento de desarrollar la integración con la `API` no fue posible generar la `API key` de `Marvel`, por lo que se utilizó la `API` alternativa de `Dragon Ball` que se indica en la [Evaluación Técnica](prueba-tecnica-ioplogistica.pdf). De todos modos, dado que los diseños son para el universo de `Marvel`, se mantuvo el logo de `Marvel` en el `Header` y el título `Comics` en la vista de detalles de un personaje para que sea fiel a los diseños en `Figma`.
-Respecto a la `Accesibilidad` y `Buenas prácticas`, la `App` se auditó `localhost` con la utilidad `Lighthouse` de `Chrome Devtools` en modos `Desktop` y `Mobile`. El resultado fue de `100%`.
+Respecto a la `Accesibilidad` y `Buenas prácticas`, la `App` se auditó en `localhost` con la utilidad `Lighthouse` de `Chrome Devtools` en modos `Desktop` y `Mobile`. El resultado fue de `100%`.
 
-El branch del repositorio es `main` y el tag `v1.0.1`.
+El branch del repositorio es `main` y el tag `v1.0.2`.
 
 La App se encuentra desplegada y accesible en Vercel en https://characters-marcos.vercel.app/
-
-Saludos,
 
 ### Compatibility
 
@@ -115,7 +113,7 @@ El directorio `infrastructure/` es la capa que contiene la implementación concr
 
 ### presentation (UI)
 
-La carpeta `presentation/` es la capa de que contiene la interfaz de usuario (`UI`), cuyo propósito principal es agrupar y organizar todas las partes relacionadas directamente con la presentación y navegación de la App. Este enfoque proporciona una estructura clara que separa las preocupaciones de la interfaz visual respecto a otras capas, como la lógica de negocio o acceso a datos.
+La carpeta `presentation/` es la capa que contiene la interfaz de usuario (`UI`), cuyo propósito principal es agrupar y organizar todas las partes relacionadas directamente con la presentación y navegación de la App. Este enfoque proporciona una estructura clara que separa las preocupaciones de la interfaz visual respecto a otras capas, como la lógica de negocio o acceso a datos.
 La `UI` solo interactúa con los casos de uso en la capa de `application` a través de `hooks`. Los datos mostrados se obtienen a través de `hooks`, `stores` o, en menor medida, por props que provienen de la capa `application`. La `UI` no debe contener lógica de negocio ni realizar llamadas directas a servicios externos.
 
 Esta carpeta contiene:
@@ -170,7 +168,7 @@ Luego del paso anterior, chequear que los API calls se repiten en el umbral de t
 
 2. Click en la key `characters-cache` y desplegar el objeto `queryKey: ["characters"]`.
 
-3. Cada un minuto se actualizan las properties `state.dataUpdatedAt` y `state.dataUpdatedCount`.
+3. Cada un minuto se deben actualizar las properties `state.dataUpdatedAt` y `state.dataUpdatedCount`.
 
 #### c) Set a console.log before fetching
 
@@ -183,7 +181,7 @@ const mm = String(currentTime.getMinutes()).padStart(2, '0');
 console.log(`getAll call: ${hh}:${mm}`);
 ```
 
-2. Cada un minuto se observa el nuevo llamado a la API:
+2. Cada un minuto se debe observar el nuevo llamado a la API:
 
 ```
 getAll call: 13:18
@@ -209,11 +207,11 @@ La herramienta de build central.
 
 ### CSS
 
-La gestión de estilos se aplica con CSS plano, siguiendo una estructura modular y escalable:
+La gestión de estilos se aplica con `CSS` estándar, siguiendo una estructura modular y escalable:
 
 #### Variables globales
 
-Definidas en un archivo central `presentation/styles/variables.css` para mantener consistencia definiendo variables centralizadas y reutilizables de colores, tipografías y espaciados, etc. Aporta facilidad para la personalización y el mantenimiento.
+Se encuentran en el fichero `presentation/styles/variables.css` para mantener consistencia definiendo variables centralizadas y reutilizables de colores, tipografías y espaciados, etc. Aporta facilidad para la personalización y el mantenimiento.
 
 #### Estilos globales
 
@@ -275,7 +273,7 @@ Un complemento `PostCSS` para añadir prefijos de proveedor de navegador.
 
 ### Typescript
 
-Aporta múltiples beneficios a la base de código de `Javascript`:
+Aporta múltiples beneficios a una base de código de `Javascript`:
 
 - Tipado estático: Evita errores antes de ejecutar el código;
 - Autocompletado y sugerencias: Mejora la experiencia en el editor;
@@ -441,7 +439,7 @@ yarn run test:watch
 
 ### 3. Tests in Vitest UI
 
-Para ejecutar las pruebas en modo watch e iniciar el servidor local con la interfaz de usuario de `Vitest` que permite:
+Para ejecutar las pruebas en modo `watch` e iniciar el servidor local con la interfaz de usuario de `Vitest` que permite:
 
 - gestionar y navegar por las pruebas y su código fuente;
 - obtener los detalles de la cobertura;
